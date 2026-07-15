@@ -1,0 +1,126 @@
+/* ============================================================
+   print.css — clean printed output, tuned for the resume page.
+   Loaded on every page with media="print".
+   ============================================================ */
+
+@media print {
+  :root,
+  [data-theme='light'] {
+    --bg: #ffffff;
+    --surface: #ffffff;
+    --surface-2: #ffffff;
+    --text: #111111;
+    --text-soft: #222222;
+    --muted: #444444;
+    --accent: #1e5c38;
+    --tan: #5a4a2a;
+    --line: #cccccc;
+    --line-strong: #999999;
+  }
+
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+    font-size: 10.5pt;
+    line-height: 1.45;
+  }
+
+  /* Hide interactive chrome */
+  .site-header,
+  .site-footer,
+  .skip-link,
+  .hero-ctas,
+  .no-print,
+  .theme-toggle,
+  .nav-burger,
+  .btn,
+  .hero-bg,
+  .terminal,
+  .cursor {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+  }
+
+  .section {
+    padding: 0.4in 0 0;
+    border: 0 !important;
+  }
+
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  a {
+    color: #111111;
+    text-decoration: none;
+  }
+
+  /* Resume sheet becomes the page */
+  .resume-sheet {
+    border: 0;
+    border-radius: 0;
+    padding: 0;
+    max-width: 100%;
+    background: #ffffff;
+  }
+
+  .resume-sheet header h1 {
+    font-size: 20pt;
+    margin-bottom: 2pt;
+  }
+
+  .resume-sheet h2 {
+    color: #1e5c38;
+    border-bottom: 1px solid #999999;
+    font-size: 10pt;
+    margin: 14pt 0 6pt;
+    page-break-after: avoid;
+  }
+
+  .resume-entry {
+    page-break-inside: avoid;
+    margin-bottom: 8pt;
+  }
+
+  .resume-entry-head .when {
+    color: #444444;
+  }
+
+  .resume-contact {
+    color: #333333;
+  }
+
+  ul {
+    margin-top: 2pt;
+  }
+
+  img,
+  .card,
+  .project-card {
+    page-break-inside: avoid;
+  }
+
+  .eyebrow::before {
+    display: none;
+  }
+
+  @page {
+    margin: 0.6in;
+  }
+}

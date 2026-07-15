@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 560" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Abstract analytics grid background">
+  <defs>
+    <pattern id="grid" width="52" height="52" patternUnits="userSpaceOnUse">
+      <path d="M52 0H0v52" fill="none" stroke="#8FD9A2" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8FD9A2" stop-opacity="0.14"/>
+      <stop offset="1" stop-color="#8FD9A2" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="560" fill="url(#grid)"/>
+  <path d="M0 430 L160 400 L320 415 L480 350 L640 370 L800 290 L960 310 L1120 220 L1280 240 L1440 160" fill="none" stroke="#8FD9A2" stroke-opacity="0.5" stroke-width="2.5"/>
+  <path d="M0 430 L160 400 L320 415 L480 350 L640 370 L800 290 L960 310 L1120 220 L1280 240 L1440 160 V560 H0 Z" fill="url(#fade)"/>
+  <path d="M0 480 L180 470 L360 440 L540 455 L720 400 L900 420 L1080 360 L1260 380 L1440 320" fill="none" stroke="#D0B995" stroke-opacity="0.35" stroke-width="2" stroke-dasharray="6 8"/>
+</svg>

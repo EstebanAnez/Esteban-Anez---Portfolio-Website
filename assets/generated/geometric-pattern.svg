@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Subtle geometric pattern">
+  <defs>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.6" fill="#8FD9A2" fill-opacity="0.25"/>
+    </pattern>
+  </defs>
+  <rect width="480" height="320" fill="url(#dots)"/>
+  <rect x="120" y="70" width="180" height="180" fill="none" stroke="#8FD9A2" stroke-opacity="0.4" stroke-width="2" transform="rotate(12 210 160)"/>
+  <rect x="190" y="90" width="180" height="180" fill="none" stroke="#D0B995" stroke-opacity="0.4" stroke-width="2" transform="rotate(-8 280 180)"/>
+</svg>

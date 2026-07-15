@@ -1,0 +1,21 @@
+{
+  "name": "Esteban Añez Velarde | Finance & Business Analytics Portfolio",
+  "short_name": "Esteban Añez",
+  "description": "Portfolio of Esteban Añez Velarde, finance and business analytics professional.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0c0d11",
+  "theme_color": "#0c0d11",
+  "icons": [
+    {
+      "src": "assets/images/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/images/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

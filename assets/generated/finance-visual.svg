@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" role="img" aria-label="Stylized financial chart illustration">
+  <defs>
+    <linearGradient id="bar" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8FD9A2" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#8FD9A2" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+  <g stroke="#8FD9A2" stroke-opacity="0.12">
+    <line x1="40" y1="60" x2="440" y2="60"/><line x1="40" y1="120" x2="440" y2="120"/>
+    <line x1="40" y1="180" x2="440" y2="180"/><line x1="40" y1="240" x2="440" y2="240"/>
+  </g>
+  <g>
+    <rect x="60" y="190" width="34" height="80" rx="3" fill="url(#bar)"/>
+    <rect x="120" y="160" width="34" height="110" rx="3" fill="url(#bar)"/>
+    <rect x="180" y="200" width="34" height="70" rx="3" fill="url(#bar)"/>
+    <rect x="240" y="130" width="34" height="140" rx="3" fill="url(#bar)"/>
+    <rect x="300" y="100" width="34" height="170" rx="3" fill="url(#bar)"/>
+    <rect x="360" y="70" width="34" height="200" rx="3" fill="url(#bar)"/>
+  </g>
+  <path d="M60 210 L137 175 L197 205 L257 140 L317 115 L377 78" fill="none" stroke="#D0B995" stroke-width="2.5"/>
+  <g fill="#0C0D11" stroke="#D0B995" stroke-width="2.5">
+    <circle cx="60" cy="210" r="5"/><circle cx="137" cy="175" r="5"/><circle cx="197" cy="205" r="5"/>
+    <circle cx="257" cy="140" r="5"/><circle cx="317" cy="115" r="5"/><circle cx="377" cy="78" r="5"/>
+  </g>
+</svg>
