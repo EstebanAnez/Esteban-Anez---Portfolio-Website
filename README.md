@@ -18,7 +18,7 @@ My personal portfolio site: finance, business analytics and AI projects, plus ex
 | About | Background, education and languages |
 | Contact | Email, LinkedIn and GitHub |
 
-Featured work includes [EquityIQ](https://github.com/EstebanAnez/EquityIQ) (AI equity research agent), equity research and valuation reports, and a public debt forecasting model built for an international analytics competition.
+Featured work includes [Snippet](https://github.com/adityak8989/UBC_2026_Snippet) (onchain clip licensing, UBC 2026 hackathon), [EquityIQ](https://github.com/EstebanAnez/EquityIQ) (AI equity research agent), [Scout](https://github.com/EstebanAnez/Scout) (AI business analyst), equity research and valuation reports, and a Best Poster public debt forecasting model.
 
 ## How it's built
 

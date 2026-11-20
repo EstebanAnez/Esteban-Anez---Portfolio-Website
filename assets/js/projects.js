@@ -15,14 +15,53 @@
 var portfolioData = {
   projects: [
     {
+      id: 'snippet',
+      title: 'Snippet: Onchain Clip Licensing (UBC 2026 Hackathon)',
+      summary:
+        'License a short stream or podcast clip with one Face ID tap, and every creator in it gets paid in USDC in the same transaction.',
+      description:
+        'Snippet lets media outlets, editors and brands license short clips from streams and podcasts. A buyer picks a clip and a license tier, approves with a passkey instead of a crypto wallet, and a Solidity contract on Circle\'s Arc network records the license and splits the USDC payment to the creator, contributors and platform in one atomic transaction. QuickNode Streams pushes every sale to a live feed and Discord alerts, ElevenLabs transcripts power quote search and captions, and a Grok ops agent writes payout notes and reviews new clip submissions.',
+      image: 'assets/projects/snippet.png',
+      imageAlt: 'Snippet banner: license the moment, pay everyone in it',
+      category: 'Blockchain & AI',
+      date: 'November 2026',
+      organization: 'University Blockchain Conference 2026 Hackathon, UT Austin',
+      context: 'Three person hackathon team; I led the build end to end',
+      problem:
+        'Reusing a ten second clip legally means finding every rights holder, agreeing on a price and paying each one separately, so most clips are either used without permission or not used at all.',
+      objective:
+        'Make licensing a clip as easy as buying a song, with instant and transparent payouts to everyone who owns a piece of it.',
+      process: [
+        'Wrote and tested the SnippetLicenses smart contract in Solidity with Foundry (27 tests), including atomic multi party USDC splits',
+        'Built the Next.js app with Circle Modular Wallets so buyers pay with Face ID and Circle Gas Station covers gas',
+        'Indexed LicenseIssued events with QuickNode Streams into Supabase for a live sales feed and Discord creator alerts',
+        'Used ElevenLabs speech to text word timestamps for captions, quote search and licensing the exact words in a clip',
+        'Built a Grok ops agent that reads the sales feed, emails payout notes and daily reports, and reviews submissions against listing rules'
+      ],
+      tools: ['Solidity', 'Next.js', 'TypeScript', 'Circle (Arc, USDC, passkeys)', 'QuickNode Streams', 'Supabase', 'ElevenLabs', 'Grok', 'Vercel'],
+      skills: ['Smart contract development', 'Full stack development', 'Payments product design', 'Team leadership'],
+      results: [
+        'Deployed live on Arc testnet with real onchain purchases and three way payment splits settling in about a second',
+        'Submitted to the Consumer Apps and Best Use of Arc tracks plus QuickNode, ElevenLabs and Grok bounties'
+      ],
+      lessons:
+        'The best crypto UX hides the crypto. Passkeys and sponsored gas let a first time buyer pay in USDC without ever seeing a wallet or a seed phrase.',
+      githubUrl: 'https://github.com/adityak8989/UBC_2026_Snippet',
+      liveUrl: 'https://snippet-gamma.vercel.app',
+      dashboardUrl: '',
+      reportUrl: '',
+      tags: ['Blockchain', 'AI', 'Payments', 'Full Stack'],
+      featured: true
+    },
+    {
       id: 'equityiq',
       title: 'EquityIQ: AI Equity Research Assistant',
       summary:
         'A conversational AI agent that answers equity research questions using live market data, news, and document retrieval.',
       description:
         'EquityIQ is a deployed AI application that lets a user ask natural-language questions about public companies and receive grounded answers. A LangGraph agent orchestrates a set of purpose-built tools: market data through yfinance, current headlines through NewsAPI, and retrieval-augmented answers over reference documents indexed in a FAISS vector store. The app is served through a Streamlit interface with persistent conversation history.',
-      image: 'assets/projects/project-placeholder-03.png',
-      imageAlt: 'Stylized data pipeline graphic representing the EquityIQ agent architecture',
+      image: 'assets/projects/equityiq.png',
+      imageAlt: 'EquityIQ banner showing an analysis request and the agent tools it calls',
       category: 'Business Analytics',
       date: '2026',
       organization: 'Independent project',
@@ -42,7 +81,7 @@ var portfolioData = {
       skills: ['AI application development', 'Financial data analysis', 'Retrieval-augmented generation', 'Product thinking'],
       results: [
         'Working application deployed publicly and available as a live demo',
-        'Reusable agent architecture later extended into a second finance agent (Finley)'
+        'Reusable agent architecture later extended into a second AI analyst (Scout)'
       ],
       lessons:
         'Grounding an AI agent in verifiable data sources matters more than model sophistication. Tool design is where the analytical value is created.',
@@ -60,8 +99,8 @@ var portfolioData = {
         'Equity analysis and valuation work for a student-managed portfolio of roughly $559K, including a full DCF for Cheniere Energy.',
       description:
         'As an Investment Analyst in the University of Kansas Applied Portfolio Management program, I analyzed public equities for a real student-managed portfolio of approximately $559,000. Work included building discounted cash flow models reconciled to Bloomberg actuals, evaluating sector positioning, and presenting buy and sell recommendations. My deepest coverage was Cheniere Energy (LNG), where I built and iterated a full DCF, alongside comparative analysis across holdings such as Pool Corp and a final group pitch recommending Micron Technology.',
-      image: 'assets/projects/project-placeholder-01.png',
-      imageAlt: 'Stylized valuation line chart representing portfolio analysis work',
+      image: 'assets/projects/apm.png',
+      imageAlt: 'Applied Portfolio Management card: $559K student managed fund, portfolio decisions',
       category: 'Investment Analysis',
       date: 'Jan 2026 – May 2026',
       organization: 'University of Kansas School of Business',
@@ -98,8 +137,8 @@ var portfolioData = {
         'Time-series forecasting of public debt using NeuralProphet, ARIMA, and LASSO, awarded Best Poster at an international analytics competition.',
       description:
         'For the Manhattan University International Business Analytics Competition, I built and compared forecasting models for public debt trajectories. The work benchmarked a modern neural forecasting approach (NeuralProphet) against classical ARIMA models and LASSO-regularized regression, evaluating fit and interpretability, and communicated the findings through a research poster. The project was advised by Professor Karthik Srinivasan.',
-      image: 'assets/projects/project-placeholder-02.png',
-      imageAlt: 'Stylized bar chart representing forecasting model comparison',
+      image: 'assets/projects/debt-forecasting.png',
+      imageAlt: 'Public debt forecasting card with actual and forecast lines and a Best Poster badge',
       category: 'Research',
       date: '2025',
       organization: 'Manhattan University International Business Analytics Competition',
@@ -127,14 +166,14 @@ var portfolioData = {
       featured: true
     },
     {
-      id: 'finley',
-      title: 'Finley: AI Finance Analyst Agent',
+      id: 'scout',
+      title: 'Scout: AI Business Analyst Agent',
       summary:
-        'A finance analyst agent that queries transaction data, computes expenses and profit, and answers questions conversationally.',
+        'An AI business analyst that writes its own SQL over 540K retail transactions to answer revenue, expense and profit questions.',
       description:
-        'Finley is an AI finance analyst built on the same agent architecture as EquityIQ, focused on structured financial data instead of market research. A LangGraph ReAct agent uses custom tools, expense lookups, expense aggregation, SQLite transaction queries, and profit calculation, with a FAISS-backed retrieval layer for reference knowledge, all wrapped in a Streamlit chat interface with conversation history.',
-      image: 'assets/projects/project-placeholder-02.png',
-      imageAlt: 'Stylized KPI dashboard graphic representing the Finley finance agent',
+        'Scout is an AI business analyst for a fictional online gift retailer, built on the same agent architecture as EquityIQ, focused on structured financial data instead of market research. A LangGraph ReAct agent uses custom tools, expense lookups, expense aggregation, SQLite transaction queries, and profit calculation, with a FAISS-backed retrieval layer for reference knowledge, all wrapped in a Streamlit chat interface with conversation history.',
+      image: 'assets/projects/scout.png',
+      imageAlt: 'Scout banner showing a plain English question, the SQL Scout wrote and its answer',
       category: 'Business Analytics',
       date: '2026',
       organization: 'Independent project',
@@ -156,11 +195,45 @@ var portfolioData = {
       ],
       lessons:
         'Deterministic calculation tools plus a language model beat a language model alone: let the model decide what to compute, not how to do arithmetic.',
-      githubUrl: '',
+      githubUrl: 'https://github.com/EstebanAnez/Scout',
       liveUrl: '',
       dashboardUrl: '',
       reportUrl: '',
       tags: ['AI', 'Python', 'SQL', 'Agents'],
+      featured: false
+    },
+    {
+      id: 'homeward',
+      title: 'Homeward: Hospital Discharge Planner',
+      summary:
+        'Plans the first 72 hours after a hospital discharge for family caregivers: what is missing, who helps and who pays.',
+      description:
+        'Homeward turns a discharge plan and the help a family already has into one simple plan. It spots gaps such as meals that only start tomorrow, asks family through a single link, points to real Lawrence and Douglas County programs, shows who pays for each item, and only marks a task done once it actually arrived and was used. Bilingual in English and Spanish and built to work on any phone.',
+      image: 'assets/projects/homeward.png',
+      imageAlt: 'Homeward banner showing a day one plan with completed, accepted and pending tasks',
+      category: 'Health Innovation',
+      date: 'October 2026',
+      organization: 'KU "The First 72 Hours" Digital Health Venture Challenge',
+      context: 'Venture challenge prototype',
+      problem:
+        'The first days after a hospital discharge are when care plans fall apart: meals, rides and deliveries slip through the cracks and families find out too late.',
+      objective:
+        'Give family caregivers one plan that closes gaps before they become problems and confirms that help really arrived.',
+      process: [
+        'Mapped the first 72 hours after discharge into concrete, non clinical tasks',
+        'Researched and verified real local programs for meals, rides and in home help',
+        'Designed a who pays view covering family, local programs, paid help and a simulated hospital support budget',
+        'Built a bilingual single page web app and published a public preview on GitHub Pages'
+      ],
+      tools: ['HTML', 'CSS', 'JavaScript', 'GitHub Pages', 'Product design'],
+      skills: ['Product thinking', 'Healthcare operations', 'User research', 'Bilingual design'],
+      results: ['Public preview live on GitHub Pages in English and Spanish'],
+      lessons: 'A task is not done when someone says yes. It is done when the help arrives and gets used.',
+      githubUrl: 'https://github.com/EstebanAnez/homeward',
+      liveUrl: 'https://estebananez.github.io/homeward/',
+      dashboardUrl: '',
+      reportUrl: '',
+      tags: ['Product', 'Health', 'Web'],
       featured: false
     },
     {
@@ -170,8 +243,8 @@ var portfolioData = {
         'A full equity research report on United Rentals (URI) with DCF and APV valuations, prepared for an advanced corporate finance course.',
       description:
         'For FIN 448 at the University of Kansas, I produced an institutional-style equity research report on United Rentals, the equipment rental company. The analysis covered business model and industry dynamics, historical financial performance, and intrinsic valuation through both a discounted cash flow model and an adjusted present value model, concluding in an investment recommendation.',
-      image: 'assets/projects/project-placeholder-01.png',
-      imageAlt: 'Stylized valuation line chart representing the equity research report',
+      image: 'assets/projects/united-rentals.png',
+      imageAlt: 'United Rentals equity research card showing DCF and APV valuation',
       category: 'Finance',
       date: '2025',
       organization: 'University of Kansas, FIN 448',
@@ -205,8 +278,8 @@ var portfolioData = {
         'A group equity pitch on a pre-profit battery technology company, valued through an EV/Revenue exit-multiple framework.',
       description:
         'As part of the Applied Portfolio Management program, my group pitched Amprius Technologies, a silicon-anode battery maker with no current profitability. Because standard earnings-based valuation breaks down for pre-profit growth companies, we built the case around an EV/Revenue exit-multiple framework, scenario-based revenue trajectories, and an honest treatment of dilution and execution risk, then defended the pitch in front of the class.',
-      image: 'assets/projects/project-placeholder-01.png',
-      imageAlt: 'Stylized valuation chart representing the Amprius equity pitch',
+      image: 'assets/projects/amprius.png',
+      imageAlt: 'Amprius Technologies pitch card with an EV to revenue valuation graphic',
       category: 'Investment Analysis',
       date: '2026',
       organization: 'University of Kansas School of Business',
