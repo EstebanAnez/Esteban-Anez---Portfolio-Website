@@ -54,6 +54,44 @@ var portfolioData = {
       featured: true
     },
     {
+      id: 'maple-research',
+      title: 'Maple Finance (SYRUP) Crypto Research Thesis',
+      summary:
+        'A long thesis on an onchain institutional lender with a $0.17 price target, backed by every vault flow rebuilt from raw onchain data. Finalist at the Franklin Templeton competition.',
+      description:
+        'For the Franklin Templeton Crypto Research Competition at the University Blockchain Conference, our team built a long thesis on Maple Finance (SYRUP), an onchain institutional lender. We set a $0.17 price target (27.7% upside) from probability weighted bear, base and bull revenue scenarios with sensitivity analysis, and tested the core credit claim directly on chain by rebuilding every deposit and withdrawal in Maple\'s two largest stablecoin vaults.',
+      image: 'assets/projects/maple.png',
+      imageAlt: 'Maple Finance research card showing the $0.17 price target and $360M of rebuilt vault flows',
+      category: 'Crypto Research',
+      date: 'November 2026',
+      organization: 'Franklin Templeton Crypto Research Competition, University Blockchain Conference',
+      context: 'Team research competition; selected as one of three finalists in the Long under $250M track',
+      problem:
+        'Onchain lenders publish their own dashboards, but investors need independent evidence that redemptions clear and loans hold their value.',
+      objective:
+        'Value SYRUP with transparent scenarios and verify the lending book with raw onchain data instead of trusting reported numbers.',
+      process: [
+        'Built bear, base and bull revenue scenarios with probability weights and sensitivity analysis',
+        'Queried raw onchain data with SQL in Allium to rebuild every deposit and withdrawal in the two largest stablecoin vaults',
+        'Reconciled the rebuilt flows to Maple\'s own dashboard',
+        'Pitched the thesis live to judges as a finalist'
+      ],
+      tools: ['SQL', 'Allium', 'Blockworks', 'Excel', 'Scenario analysis'],
+      skills: ['Crypto research', 'Onchain data analysis', 'Valuation', 'Pitching'],
+      results: [
+        '$0.17 price target, 27.7% upside',
+        'Showed $360M cleared over 24 days with no vault markdown, reconciling to Maple\'s dashboard within $2M',
+        'Finalist, Long under $250M track'
+      ],
+      lessons: 'In crypto the data is public, so the strongest argument is the one you can rebuild yourself from the chain.',
+      githubUrl: '',
+      liveUrl: '',
+      dashboardUrl: '',
+      reportUrl: '',
+      tags: ['Crypto', 'SQL', 'Valuation', 'Research'],
+      featured: true
+    },
+    {
       id: 'equityiq',
       title: 'EquityIQ: AI Equity Research Assistant',
       summary:
@@ -96,11 +134,11 @@ var portfolioData = {
       id: 'apm-portfolio',
       title: 'Applied Portfolio Management: Investment Analyst',
       summary:
-        'Equity analysis and valuation work for a student-managed portfolio of roughly $559K, including a full DCF for Cheniere Energy.',
+        'Equity analysis and valuation work for a student-managed portfolio of roughly $572K, including a full DCF for Cheniere Energy.',
       description:
         'As an Investment Analyst in the University of Kansas Applied Portfolio Management program, I analyzed public equities for a real student-managed portfolio of approximately $559,000. Work included building discounted cash flow models reconciled to Bloomberg actuals, evaluating sector positioning, and presenting buy and sell recommendations. My deepest coverage was Cheniere Energy (LNG), where I built and iterated a full DCF, alongside comparative analysis across holdings such as Pool Corp and a final group pitch recommending Micron Technology.',
       image: 'assets/projects/apm.png',
-      imageAlt: 'Applied Portfolio Management card: $559K student managed fund, portfolio decisions',
+      imageAlt: 'Applied Portfolio Management card: $572K student managed fund, portfolio decisions',
       category: 'Investment Analysis',
       date: 'Jan 2026 – May 2026',
       organization: 'University of Kansas School of Business',
@@ -163,7 +201,41 @@ var portfolioData = {
       dashboardUrl: '',
       reportUrl: '',
       tags: ['Forecasting', 'Python', 'Data Visualization', 'Economics'],
-      featured: true
+      featured: false
+    },
+    {
+      id: 'crime-hotspots',
+      title: 'Crime Hotspot Classification and Forecasting',
+      summary:
+        'A machine learning model that flags crime hotspots across a city grid from 110,000+ geocoded records. 1st place at the KU AIO Analytics Competition.',
+      description:
+        'Using Kansas City Police Department call data, I engineered spatial and temporal features from more than 110,000 geocoded records, aggregated them into roughly 870 one kilometer grid cells, and trained a class balanced classifier to identify likely hotspots. The model reached 87% accuracy and was evaluated with cross validation, a classification report and a confusion matrix.',
+      image: 'assets/projects/crime-hotspots.png',
+      imageAlt: 'Crime hotspot card showing a city grid heatmap and 87% model accuracy',
+      category: 'Machine Learning',
+      date: 'November 2025',
+      organization: 'KU AIO Analytics Competition',
+      context: 'Team analytics competition',
+      problem:
+        'Police resources are limited, and raw call logs do not show where risk concentrates or when.',
+      objective:
+        'Turn raw call records into a model that highlights where and when hotspots are likely, with honest documentation of its limits.',
+      process: [
+        'Cleaned and geocoded 110,000+ call records in Python',
+        'Aggregated events into about 870 one kilometer grid cells with spatial and temporal features',
+        'Trained a class balanced classifier with scikit-learn and evaluated it with cross validation',
+        'Wrote a 20 page report on methodology and limitations and presented the findings'
+      ],
+      tools: ['Python', 'pandas', 'NumPy', 'scikit-learn'],
+      skills: ['Feature engineering', 'Classification', 'Model evaluation', 'Technical writing'],
+      results: ['1st place, KU AIO Analytics Competition', '87% classification accuracy'],
+      lessons: 'A model is only as useful as its documented limits. Explaining what it cannot do earned as much trust as the accuracy number.',
+      githubUrl: '',
+      liveUrl: '',
+      dashboardUrl: '',
+      reportUrl: '',
+      tags: ['Machine Learning', 'Python', 'Data Science'],
+      featured: false
     },
     {
       id: 'scout',
