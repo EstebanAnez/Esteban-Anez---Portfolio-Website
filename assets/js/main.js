@@ -10,32 +10,33 @@
   var THEME_KEY = 'eav-theme';
 
   function applyTheme(theme) {
-    if (theme === 'light') {
-      document.documentElement.setAttribute('data-theme', 'light');
+    if (theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
     } else {
       document.documentElement.removeAttribute('data-theme');
     }
     var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', theme === 'light' ? '#f3f1e9' : '#0c0d11');
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#0f1733' : '#f6f7fa');
   }
 
   function storedTheme() {
     try { return localStorage.getItem(THEME_KEY); } catch (e) { return null; }
   }
 
-  // Apply saved theme as early as possible (script is loaded with defer,
-  // and an inline snippet in <head> also applies it to avoid flashes).
-  applyTheme(storedTheme() || 'dark');
+  // Light is the default; an inline snippet in <head> applies a saved
+  // dark preference before first paint to avoid a flash.
+  applyTheme(storedTheme() === 'dark' ? 'dark' : 'light');
 
   function initThemeToggle() {
     var btn = document.querySelector('.theme-toggle');
     if (!btn) return;
+    btn.setAttribute('aria-pressed', String(document.documentElement.getAttribute('data-theme') === 'dark'));
     btn.addEventListener('click', function () {
-      var isLight = document.documentElement.getAttribute('data-theme') === 'light';
-      var next = isLight ? 'dark' : 'light';
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      var next = isDark ? 'light' : 'dark';
       applyTheme(next);
       try { localStorage.setItem(THEME_KEY, next); } catch (e) { /* private mode */ }
-      btn.setAttribute('aria-pressed', String(next === 'light'));
+      btn.setAttribute('aria-pressed', String(next === 'dark'));
     });
   }
 

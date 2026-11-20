@@ -136,7 +136,7 @@ var portfolioData = {
       summary:
         'Equity analysis and valuation work for a student-managed portfolio of roughly $572K, including a full DCF for Cheniere Energy.',
       description:
-        'As an Investment Analyst in the University of Kansas Applied Portfolio Management program, I analyzed public equities for a real student-managed portfolio of approximately $559,000. Work included building discounted cash flow models reconciled to Bloomberg actuals, evaluating sector positioning, and presenting buy and sell recommendations. My deepest coverage was Cheniere Energy (LNG), where I built and iterated a full DCF, alongside comparative analysis across holdings such as Pool Corp and a final group pitch recommending Micron Technology.',
+        'As an Investment Analyst in the University of Kansas Applied Portfolio Management program, I analyzed public equities for a real student-managed portfolio of approximately $572,000. Work included building discounted cash flow models reconciled to Bloomberg actuals, evaluating sector positioning, and presenting buy and sell recommendations. My deepest coverage was Cheniere Energy (LNG), where I built and iterated a full DCF, alongside comparative analysis across holdings such as Pool Corp and a final group pitch recommending Micron Technology.',
       image: 'assets/projects/apm.png',
       imageAlt: 'Applied Portfolio Management card: $572K student managed fund, portfolio decisions',
       category: 'Investment Analysis',

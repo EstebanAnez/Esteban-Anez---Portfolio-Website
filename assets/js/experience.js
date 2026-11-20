@@ -19,7 +19,7 @@ var experienceData = {
       start: 'January 2026',
       end: 'May 2026',
       description:
-        'Analyst in a student-managed investment program responsible for research and recommendations on a real public equity portfolio of approximately $559,000.',
+        'Analyst in a student-managed investment program responsible for research and recommendations on a real public equity portfolio of approximately $572,000.',
       responsibilities: [
         'Built discounted cash flow and adjusted present value models for portfolio holdings and candidates',
         'Reconciled model drivers to Bloomberg Terminal actuals',
