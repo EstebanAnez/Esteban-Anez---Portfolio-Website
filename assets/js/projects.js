@@ -46,7 +46,7 @@ var portfolioData = {
       ],
       lessons:
         'Grounding an AI agent in verifiable data sources matters more than model sophistication. Tool design is where the analytical value is created.',
-      githubUrl: '',
+      githubUrl: 'https://github.com/EstebanAnez/EquityIQ',
       liveUrl: 'https://equityiq.streamlit.app',
       dashboardUrl: '',
       reportUrl: '',
