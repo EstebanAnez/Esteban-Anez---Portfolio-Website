@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/banner.png" alt="Esteban Añez Velarde portfolio"></p>
+
 # Esteban Añez Velarde · Portfolio
 
 My personal portfolio site: finance, business analytics and AI projects, plus experience and resume.
